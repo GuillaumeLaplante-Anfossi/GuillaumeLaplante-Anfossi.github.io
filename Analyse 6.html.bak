@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0063)https://www.math.univ-paris13.fr/~laplante-anfossi/analyse6.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>Analyse 6</title>
+    <link href="./Analyse 6_files/trs-style-iWeblike.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://www.math.univ-paris13.fr/~laplante-anfossi/images-static/latinsq.png" type="image/png">
+  <style></style><style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="true"><link rel="preconnect" href="https://fonts.gstatic.com/"><link rel="stylesheet" href="./Analyse 6_files/css2"></head>
+  <body>
+    <div id="navigation">
+      <table>
+        <tbody>
+          <tr>
+            <td><a href="https://guillaumelaplante-anfossi.github.io/index.html">Accueil</a></td>
+            <td><a href="https://guillaumelaplante-anfossi.github.io/Mathematics.html">Mathématiques</a></td>
+            <td><a href="https://guillaumelaplante-anfossi.github.io/Musique.html" target="_top">Musique</a></td>
+            <td><a href="https://guillaumelaplante-anfossi.github.io/Autres.html">Autres</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="hr">
+        <hr> </div>
+    </div>
+    <p>
+      <!-- End of navigation div ----> </p>
+    <p style="font-weight: bold; text-align: center; font-size: 36px;">Analyse 6<br>
+    </p>
+    <div style="margin-left: 40px; width: auto; text-align: center;"><i style="font-size: 12pt;">Licence
+        3, Hiver 2020, Université Sorbonne Paris Nord</i></div>
+    <div style="margin-left: 40px; width: auto; text-align: center;"><br>
+      Professeur: <a href="https://www.math.univ-paris13.fr/~marchal/" target="_blank">Philippe
+        Marchal</a>.</div>
+    <div style="margin-left: 40px; width: auto;"><br>
+    </div>
+    <div>
+      <div style="text-align: left; margin-left: 40px;">
+        <p>L’analyse complexe est sans doute l’une des plus belles branches des
+          mathématiques. Le monde des fonctions holomorphes est à la fois rigide
+          et merveilleux. Pour y entrer, il faut évidemment fournir un grand
+          effort, mais je vous assure que <i>le jeu en vaut la chandelle</i>
+          (c’est vrai partout en mathématiques, mais particulièrement cette
+          fois-ci). En guise de motivation, voici <a href="./fichiers/MAT2130_hiver2017.pdf" target="_blank">le
+            texte de présentation du cours</a> de L3 que j'ai suivi il y a
+          quelques années avec le professeur <a href="https://dms.umontreal.ca/fr/repertoire-departement/professeurs/portrait/lalonde" target="_blank">François
+            Lalonde</a>. </p>
+        <p>Nous suivons <a href="https://www.math.univ-paris13.fr/~nier/ensP13.html" target="_blank">les
+            notes de Francis Nier</a>, section <i>L3-Fonctions holomorphes</i>.
+          En complément, vous pourrez consulter avec profit les <a href="http://irma.math.unistra.fr/~maudin/analysecomp.pdf" target="_blank">notes
+            de cours</a> de <a href="http://irma.math.unistra.fr/~maudin/" target="_blank">Michèle
+            Audin</a>. </p>
+        <p>Vous pouvez échanger et poser vos questions sur le <a href="https://discord.gg/SFARhqg" target="_blank">salon
+            discord prévu à cet effet</a>. Ce salon sera notre moyen de
+          communication principal et je vous invite à l'utiliser! Vous pouvez y
+          écrire vos symboles mathématiques à l'aide du <a href="https://www.overleaf.com/learn/latex/Mathematical_expressions" target="_blank">langage
+            LaTeX</a>, en mettant vos formules entre des signes $. Nous allons
+          délaisser le forum de l'ENT pour des raisons techniques. </p>
+        <p>N'hésitez pas à <a href="mailto:laplante-anfossi@math.univ-paris13.fr" target="_blank">m'écrire</a>
+          au besoin. </p>
+        <p><br>
+        </p>
+        <p>COURS </p>
+        <p>Vous pouvez accéder à Zoom en suivant <a href="https://zoom.us/j/906507267?pwd=UjJqQXB3UE8zeDlXMVBpSXNESVYzZz09" target="_blank">ce
+            lien</a>. L'identifiant est: 865 313 4100. </p>
+        <p><b>Notes de cours</b>: <a href="https://www.math.univ-paris13.fr/~nier/ensP13/FHolL3/Cetseries.pdf" target="_blank">NC1</a>,
+          <a href="https://www.math.univ-paris13.fr/~nier/ensP13/FHolL3/foncthol.pdf" target="_blank">NC2</a>,
+          <a href="https://www.math.univ-paris13.fr/~nier/ensP13/FHolL3/cauchy.pdf" target="_blank">NC3</a>,
+          <a href="https://www.math.univ-paris13.fr/~nier/ensP13/FHolL3/mero.pdf" target="_blank">NC4</a>.</p>
+        <p>Vendredi 27 mars 2020 à 9h. Cette séance a porté sur le chapitre NC1.
+        </p>
+        <ul>
+          <li>Le <a href="https://www.youtube.com/watch?v=iDyU9Y4zJzY&amp;list=PLA7FEDF4FDFC667F1" target="_blank">premier
+              épisode</a> du film <i>Dimensions</i> de <a href="http://perso.ens-lyon.fr/ghys/accueil/" target="_blank">Étienne
+              Ghys</a>, Jos Leys et Aurélien Alvarez vous permet de visualiser
+            la projection stéréographique (la suite du film est passionnante et
+            très belle, je vous invite à la visionner!). </li>
+        </ul>
+        <p>Mardi 31 mars à 9h. La séance a porté sur les 18 premières pages du
+          chapitre NC2.</p>
+        <p>Vendredi 3 avril 2020 à 8h45. Lire les pages 31 (définition d'un
+          chemin) et 53-66 (intégrale le long d'un chemin) du chapitre NC2.</p>
+        <p>Lundi 20 avril 2020 à 10h15: fin du chapitre NC2. </p>
+        <ul>
+          <li>La chaîne <a href="https://www.youtube.com/channel/UCEusNAJHZ6uKRoA3q8ApXfw/videos" target="_blank">Henri
+              Paul de Saint-Gervais</a> propose quelques vidéos qui vous
+            permettent de visualiser des homotopies entre chemins. Il y a
+            également plusieurs vidéos d'initiation au domaine fascinant de la
+            topologie algébrique (<a href="http://analysis-situs.math.cnrs.fr/" target="_blank">plus
+              de détails ici</a>...).</li>
+        </ul>
+        <p>Vendredi 24 avril 2020 à 8h45: début du chapitre NC3. </p>
+        <p>Lundi 27 avril 2020 à 10h15: lire les pages 16 à 26 du chapitre NC3
+          sur le Théorème de Cauchy.</p>
+        <p>Lundi 4 mai 2020 à 10h15 (pas de cours le 1er mai). Fin du 3e
+          chapitre. Démonstrations des théorèmes d'équivalence entre fonctions
+          holomorphes et analytiques, de Liouville et de D'Alembert. Les
+          théorèmes restants seront vus sans démonstration.</p>
+        <p>Lundi 11 mai 2020 de 10h15 à 12h (pas de cours le 8 mai). <u>Contrôle</u>.
+          Il portera sur l'ensemble des notions vues jusqu'au 4 mai, soit les 3
+          premiers chapitres des notes de cours de même que les 3 premiers TDs.</p>
+        <p style="margin-left: 40px;"><i>Le sujet vous sera envoyé par courriel,
+            format pdf, le 11 mai à 10h15.</i></p>
+        <i> </i>
+        <p style="margin-left: 40px;"><i>Vous devrez renvoyer à l'adresse <a href="mailto:marchal@math.univ-paris13.fr" target="_blank">marchal@math.univ-paris13.fr</a>
+            votre copie avant 12h, sous forme de fichier pdf portant le nom «
+            nom_hol1.pdf ». Au cas où vous n'arriveriez pas à mettre votre copie
+            au format pdf, utilisez un fichier jpg avec le nom « nom_hol1.jpg ».
+            Enfin, si vous envoyez plusieurs fichiers, numérotez-les DANS LE BON
+            ORDRE : nom1_hol1.pdf, nom2_hol1.pdf etc. Attention, le nom de votre
+            fichier ne doit pas comporter d'espace. N'utilisez pas l'ENT.<br>
+          </i> <i><br>
+            Nous comptons sur votre honnêteté pour ne pas communiquer avec
+            quiconque pendant le contrôle et ne consulter que vos notes de
+            cours. Évidemment, il nous est impossible de vérifier.<br>
+          </i> <i><br>
+            Si vous avez des difficultés personnelles par rapport à ces
+            consignes, signalez-le par courriel. Si vous avez des question
+            générales qui peuvent intéresser d'autres étudiants, posez-les
+            plutôt sur discord. </i></p>
+        <p>Mercredi 13 mai à 13h30: Lire les pages 25 à 31 du chapitre NC4 sur
+          les fonctions méromorphes.</p>
+        <p>Vendredi 15 mai 2020 à 8h45: Suite du chapitre NC4.</p>
+        <p>Mercredi 20 mai à 13h30: Notion de primitive holomorphe, pages 2-12
+          du chapitre NC4 ainsi que de prolongement analytique des fonctions
+          analytiques réelles, pages 17-20 du chapitre NC4. La démonstration de
+          la forme la plus générale du théorème de Cauchy, pp 37-44, ne sera pas
+          vue en classe. Vous pouvez regarder cette démonstration chez vous et
+          poser des questions sur discord si vous avez besoin
+          d'éclaircissements.</p>
+        <p style="text-align: center;"><i>Fin des séances sur zoom. </i></p>
+        <p>Vous pouvez poser vos questions sur discord.</p>
+        Lundi 25 mai 2020: ****Remise du devoir 1!****
+        <p>Lundi 1er juin 2020: ****Remise du devoir 2!****</p>
+        <p>Mardi 2 juin 2020 entre 10h30 et 11h: test de connexion vidéo sur le
+          salon discord en vue des oraux.</p>
+        <p><b>Semaine du 8 juin</b>: examens oraux individuels sur discord.&nbsp;</p>
+        <p style="margin-left: 40px;"><i>Vous serez interrogés sur l'ensemble du
+            cours et sur le DM2, qui porte sur la totalité du programme
+            d'analyse 6, pas seulement l'analyse complexe. <br>
+          </i></p>
+        <p style="margin-left: 40px;"><i>Lors de l'oral, pour vérifier votre
+            identité, nous utiliserons la vidéo, au moins au début de chaque
+            passage. Si vous avez des difficultés techniques à ce sujet, merci
+            de le signaler le plus tôt possible par courriel.<br>
+          </i></p>
+        <p><br>
+        </p>
+        <p>TD </p>
+        <p>Vous pouvez accéder au salon discord en suivant <a href="https://discord.gg/SFARhqg" target="_blank">ce
+            lien</a>. </p>
+        <p><b>Énoncés: </b><a href="https://www.math.univ-paris13.fr/~nier/ensP13/FHolL3/TD1.pdf" target="_blank">TD1</a>,
+          <a href="https://www.math.univ-paris13.fr/~nier/ensP13/FHolL3/TD2.pdf" target="_blank">TD2</a>,
+          <a href="https://www.math.univ-paris13.fr/~nier/ensP13/FHolL3/TD3.pdf" target="_blank">TD3</a>,
+          <a href="https://www.math.univ-paris13.fr/~nier/ensP13/FHolL3/CalcintResidus.pdf" target="_blank">TD4</a>.</p>
+        <p><b>Corrigés</b>:</p>
+        <p>Lundi 30 mars 2020 à 10h. La séance a porté sur les exercices 1 à 5
+          du TD1. </p>
+        <ul>
+          <li>Le site de <a href="https://www.wolframalpha.com/" target="_blank">WolframAlpha</a>
+            peut vous servir à vérifier vos calculs de limites et à tracer vos
+            fonctions. </li>
+        </ul>
+        <p>Mercredi 1er avril à 10h45. La séance a porté sur les exercices 6 à
+          10 du TD1. </p>
+        Mardi 21 avril 2020 à 10h30. La séance a porté sur les exercices 1,2,5
+        et 6 du TD2. </div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Mercredi 22 avril 2020 à
+        13h30. La séance a porté sur l'exercice 8 du TD2.</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Mardi 28 avril 2020 à
+        10h30. La séance a porté sur l'exercice 3 du TD2, de même que les
+        exercices 1, 4 et 7 du TD3.</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Mercredi 29 avril 2020 à
+        13h30. La séance a porté sur les exercices 5 et 6 du TD3.</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Mardi 5 mai 2020 à 9h.
+        La séance portera sur les exercices 4 et 7 du TD2, de même que les
+        exercices 3 et 8 du TD3.</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Mercredi 6 mai 2020 à
+        13h30. Révision.</div>
+      <div style="text-align: left; margin-left: 40px;">&nbsp; </div>
+      <div style="text-align: center; margin-left: 40px;"><i>À partir du 12 mai
+          et jusqu'à la fin du cours les séances de TDs seront assurées par
+          Francis Nier</i>. </div>
+      <div style="text-align: left; margin-left: 40px; text-decoration: line-through;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px; text-decoration: line-through;">Mardi
+        12 mai 2020 à 10h15</div>
+      <div style="text-align: left; margin-left: 40px;"> --&gt; Jeudi 14 mai de
+        8h45 à 10h15 : Exercices 1 et 2 (2.1, 2.2, 2.3 et 2.4) du TD4.</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Lundi 18 mai 2020 à
+        10h15: Exercice 2 (2.5, 2.6 et 2.7) du TD4. </div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Mardi 19 mai 2020 à
+        10h15: Exercice 3 du TD4.</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+        Vendredi 22 mai 2020 à 8h45: Fin de l'exercice 3, exercices 4 et 5 du
+        TD4.</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">--&gt; Jeudi 28 mai 2020
+        de 10h à 12h: Séance de questions sur le DM2. </div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Vendredi 29 mai 2020 à
+        8h45: Suite du TD4 (dernière séance).</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">DM</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Il y aura deux devoirs à
+        remettre. </div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;"><b>Énoncés</b>:</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;"><b>Corrigés</b>:</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">Le premier devoir doit
+        être envoyé par courriel à l'adresse <a href="mailto:marchal@math.univ-paris13.fr" target="_blank">laplante-anfossi@math.univ-paris13.fr</a>
+        <b>au plus tard le lundi 25 mai 2020 à 23h59</b>.</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">
+        <ul>
+          <li>Au sujet de l'exercice 4) a): il faut bien montrer que P(gamma(t))
+            est homotope à P(0) <u>dans C privé de {0}</u>.</li>
+        </ul>
+        <ul>
+          <li>Voici un <a href="http://weitz.de/fund/" target="_blank">magnifique
+              site internet</a> permettant d'acquérir une intuition visuelle de
+            la démonstration topologique du théorème de d'Alembert-Gauss
+            (exercices 3 et 4). Cela peut vous aider à « voir » ce qui se passe.</li>
+        </ul>
+        <ul>
+          <li>Indication pour l’exercice 5 l) iv): considérez Log(iz) et
+            Log(z/i). </li>
+        </ul>
+      </div>
+      <br>
+      <div style="text-align: left; margin-left: 40px;">Le deuxième devoir doit
+        être envoyé par courriel à l'adresse du professeur qui vous interrogera
+        lors de l'oral: Philippe Marchal <a href="mailto:marchal@math.univ-paris13.fr">marchal@math.univ-paris13.fr</a>
+        ou Francis Nier <a href="mailto:nier@math.univ-paris13.fr">nier@math.univ-paris13.fr</a>
+        , <b>au plus tard le lundi 1er juin 2020 à 11h59</b>.</div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;">
+        <ul>
+          <li>***Une nouvelle version de l'énoncé du DM2 a été mise en ligne le
+            24 mai 2020, veillez à l'utiliser! Vous devrez peut-être recharger
+            la page pour y avoir accès***</li>
+        </ul>
+        <ul>
+          <li>Il est assez long mais les questions avec une astérisque sont
+            facultatives. Elles portent sur l'intégralité du programme d'analyse
+            6. Lors de l'oral, vous serez interrogés sur l'ensemble du cours et
+            sur ce DM2.</li>
+        </ul>
+        <ul>
+          <li>Envoyez vos copies sous la forme Nom_DM2.pdf</li>
+        </ul>
+        <ul>
+          <li>Séance de questions sur le DM2 le jeudi 28 mai 2020 de 10h à 12h
+            sur discord.</li>
+        </ul>
+        <ul>
+          <li>Toutes les indications données et tapées sur le DM2 restent en
+            ligne sur discord. Ce qui a été dit à l'oral n'a pas été enregistré
+            (mais il fallait venir au TD du 28 mai).</li>
+        </ul>
+        <ul>
+          <li>2 typos sont restées dans la deuxième version: </li>
+          <ul>
+            <li>Question II-f) supprimer le k! dans l'expression de la dérivée
+              k-ième de J_n en 0.&nbsp;</li>
+            <li>Question subsidiaire II-i)* L'exposant de t dans le dénominateur
+              de l'équivalent de Y_n est n et non 2n.</li>
+          </ul>
+        </ul>
+        <ul>
+          <li>Consigne sur le devoir: Ne pas essayer de tout faire mais plutôt
+            de bien faire et bien maîtriser ce que vous écrivez. Dans les 3
+            parties les quelques premières questions sont très liées au cours ou
+            très peu techniques.</li>
+        </ul>
+        <ul>
+          <li>L'oral aura pour premier but de bien vérifier que c'est vous qui
+            avez travaillé sur ce que vous avez écrit. Vous serez donc en
+            premier lieu interrogé(e) sur ce que vous avez présenté à l'écrit.
+            Éventuellement des questions vous seront posées sur des parties qui
+            ne sont pas traitées; ou des questions de cours;&nbsp; ou un petit
+            exercice de calcul simple par exemple à l'aide de la formule de
+            Cauchy ou du théorème des résidus ou un calcul d'indice vous sera
+            posée. Cette évaluation a pour but de s'assurer que vous avez acquis
+            des compétences de base en équations différentielles et fonctions
+            holomorphes. Si au regard de votre copie et de votre oral nous en
+            acquérons la certitude vous aurez votre UE. En revanche nous aurons&nbsp;
+            un jugement plus sévère si il y a un décalage flagrant entre votre
+            copie et votre oral.</li>
+        </ul>
+        <br>
+        &nbsp;<br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;"><br>
+      </div>
+      <div style="text-align: left; margin-left: 40px;"><i>Dernière mise à jour
+          le 11 juin 2020</i>.</div>
+      <div><br>
+      </div>
+      <div><br>
+      </div>
+    </div>
+  
+
+</body></html>
